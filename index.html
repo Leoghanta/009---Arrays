@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays with JavaScript Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/sunburst.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header>
+        <h1>Workshop 9: Arrays with JavaScript</h1>
+    </header>
+
+    <div class="container">
+        <h1>Workshop 9</h1>
+        <p>An <span class="highlight">Array</span> is a special variable, which can hold more than one value at a time. Arrays allow 
+           you to store multiple values in a single variable, making it easy to work with lists of data.</p>
+
+        <h2>Creating Arrays</h2>
+        <p>You can create an array using square brackets <code>[]</code> and placing values inside them, separated by commas:</p>
+        <pre><code class="language-javascript">
+const colours = ["Red", "Green", "Blue"];
+        </code></pre>
+        <p>In this example, <code>colours</code> is an array containing three strings.</p>
+
+        <h2>Accessing Array Elements</h2>
+        <p>You can access an element in an array using its index, starting from 0:</p>
+        <pre><code class="language-javascript">
+console.log(colours[0]);  // Outputs: Red
+console.log(colours[1]);  // Outputs: Green
+console.log(colours[2]);  // Outputs: Blue
+        </code></pre>
+
+        <h3>Try It Out: Access Array Elements</h3>
+        <p>Using the script.js, create a function called showArrayElements() that is triggered by this
+           button. Create the array of colours and display the first and last colour of the array.</p>
+        <p>Display your answer in the paragraph with the id "arrayElementsResult"</p>
+        <p><button onclick="showArrayElements()">Click to Display First and Last Colour</button></p>
+        <p class="highlight" id="arrayElementsResult"></p>
+
+        <h2>Modifying Arrays</h2>
+        <p>You can change an array element by accessing it with its index and assigning it a new value:</p>
+        <pre><code class="language-javascript">
+colours[1] = "Purple"; // Changes "Green" to "Purple"
+console.log(colours);   // Outputs: ["Red", "Purple", "Blue"]
+        </code></pre>
+
+        <h2>Array Properties and Methods</h2>
+        <p>Arrays come with several built-in properties and methods. Here are some commonly used ones:</p>
+
+        <h3>1. Length</h3>
+        <p>The <code>length</code> property returns the number of elements in an array:</p>
+        <pre><code class="language-javascript">
+console.log(colours.length);  // Outputs: 3
+        </code></pre>
+
+        <h3>2. Push and Pop</h3>
+        <p><code>push()</code> adds a new element to the end of the array, while <code>pop()</code> removes the last element:</p>
+        <pre><code class="language-javascript">
+colours.push("Yellow"); // Adds "Yellow" to the end
+console.log(colours);    // Outputs: ["Red", "Green", "Blue", "Yellow"]
+
+colours.pop();           // Removes the last element
+console.log(colours);    // Outputs: ["Red", "Green", "Blue"]
+        </code></pre>
+
+        <h3>3. Shift and Unshift</h3>
+        <p><code>shift()</code> removes the first element, while <code>unshift()</code> adds a new element at the beginning of the array:</p>
+        <pre><code class="language-javascript">
+colours.shift();          // Removes the first element
+console.log(colours);     // Outputs: ["Green", "Blue"]
+
+colours.unshift("Black"); // Adds "Black" to the beginning
+console.log(colours);     // Outputs: ["Black", "Green", "Blue"]
+        </code></pre>
+
+        <h3>Try It Out: Modify the Array</h3>
+        <p>Create a function called modifyArray that is triggered with this button. Create an array of 3 colours <code class="highlight">const colours = ["Red", "Green", "Blue"];</code>
+           Use the array modifiers to add "Yellow" to the end of the array, and remove Red from the array. Display the results of the array in the paragraph
+           with the id "modifyArrayResult"
+        </p>
+        <p><button onclick="modifyArray()">Click to Modify Array</button></p>
+        <p class="highlight" id="modifyArrayResult"></p>
+
+
+
+        <h2>Common Array Methods</h2>
+        <p>Here are a few additional array methods that are useful for manipulating data:</p>
+
+        <ul>
+            <li><code>concat()</code> - Joins two or more arrays.</li>
+            <li><code>indexOf()</code> - Returns the first index of a specified element.</li>
+            <li><code>includes()</code> - Checks if an array contains a specified element.</li>
+            <li><code>slice()</code> - Returns a portion of an array.</li>
+            <li><code>reverse()</code> - Reverses the order of the array.</li>
+        </ul>
+
+        <h3>Example: Using `concat` and `slice`</h3>
+        <pre><code class="language-javascript">
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = arr1.concat(arr2);  // Outputs: [1, 2, 3, 4, 5, 6]
+
+const sliced = combined.slice(2, 5); // Outputs: [3, 4, 5]
+        </code></pre>
+
+        <h2>Practice Exercises</h2>
+        <ul>
+            <li>Task 1: Create an array of 5 numbers and calculate the total sum</li>
+            <li>Task 2: Create an array of names and check if a specific name exists using <code>includes()</code>.</li>
+            <li>Task 3: Create an array of numbers and reverse the array using <code>reverse()</code>.</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>&copy; J. Wilson. Dundee and Angus College.</p>
+    </footer>
+</body>
+</html>
